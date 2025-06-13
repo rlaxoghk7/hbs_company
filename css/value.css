@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+.btn_flex {display: flex; justify-content: space-between; flex-wrap: wrap;}
+.btn_flex .brand_box {width: 270px;}
+.btn_flex .brand_box:nth-child(n+5) {margin-top: 50px;}
+.btn_flex .brand_box button {position: relative; width: 100%; height: 300px; border: 1px solid #ccc; border-radius: 10px; box-sizing: border-box;}
+.btn_flex .brand_box .brand_nm {margin-top: 20px; font-size: 20px; font-weight: 600;}
+
+@media (max-width: 1200px) {
+  .btn_flex .brand_box {width: 240px}
+}
+
+@media (max-width: 1000px) {
+  .btn_flex .brand_box  {width: 48%;}
+  .btn_flex .brand_box:nth-child(n+3) {margin-top: 40px;}
+}
+
+@media (max-width: 640px) {
+  .hbs_brand > #sub_banner .path_wrap .path_list .path_text {padding: 0 10px; height: 50px; font-size: 15px;}
+}
+
+@media (max-width: 430px) {
+  .hbs_brand > #sub_banner .path_wrap .path_list .path_text {font-size: 11px; font-weight: 300; padding: 0 5px; height: 40px;}
+}
+
+/* product popup */
+.brand_layer_popup {display: none; position : fixed; top:0; left: 0; z-index: 9999; width: 100%; height: 100%; background-color: rgba(41,41,41,.8);}
+.brand_layer_popup.on {display: block;}
+.brand_layer_popup .layer_inner {position: absolute; top: 50%; left: calc(50% - 500px); width: 1000px; max-height: 100vh; padding: 30px; border-radius: 15px; background-color: #fff; transform: translateY(-50%); overflow: auto;}
+.brand_layer_popup .layer_inner::-webkit-scrollbar {display: none;}
+.brand_layer_popup .layer_inner .layer_close {position: absolute; top: 30px; right: 30px; width: 16px; height: 16px; z-index: 1; background: url(../images/close.svg) no-repeat center / cover; font-size: 0;}
+.brand_layer_popup .layer_con {position: relative;}
+.brand_layer_popup .context {display: flex; align-items: center; margin-bottom: 30px;}
+.brand_layer_popup .context .imgbox {width: 450px; margin-right: 50px; text-align: center;}
+.brand_layer_popup .context .textbox {width: calc(100% - 500px);}
+.brand_layer_popup .context .b_logo {margin-bottom: 20px;}
+.brand_layer_popup .context .b_slogan {margin-bottom: 20px; font-size: 24px; font-weight: 600; line-height: 30px;}
+.brand_layer_popup .context .b_text {font-size:16px; font-weight: 400; line-height: 28px; word-break: keep-all;}
+
+.brand_layer_popup .thumb_box .flexbox{display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;}
+.brand_layer_popup .thumb_box .tmb_left {font-size: 22px; font-weight: 600;}
+.brand_layer_popup .thumb_box .tmb_right .mall_link, .brand_layer_popup .thumb_box .tmb_right .cont_link {color: #fff; padding: 5px 20px; border-radius: 20px; font-weight: 500; font-size: 16px;}
+.brand_layer_popup .thumb_box .tmb_right .mall_link {background-color: #292929;}
+.brand_layer_popup .thumb_box .tmb_right .cont_link {background-color: #2C6EAC;}
+.brand_layer_popup .thumb_box .tmb_right .mall_link::after, .brand_layer_popup .thumb_box .tmb_right .cont_link::after {content: ''; display: inline-block; vertical-align: center; width: 11px; height: 11px; margin-left: 6px; background: url(../images/arrow_rw.png) no-repeat center / contain;}
+
+.brand_layer_popup .thumb_box .scroll_box {padding-top: 30px; padding-bottom: 10px; border-top: 1px solid #292929; display: flex; justify-content: space-between;}
+.brand_layer_popup .thumb_box .scroll_box .scroll_item {display: inline-block; width: 220px; color: #292929;}
+.brand_layer_popup .thumb_box .scroll_box .thumb_img img {border-radius: 10px;}
+.brand_layer_popup .thumb_box .scroll_box .thumb_nm {margin-top: 15px; font-size: 18px;}
+
+@media (max-width: 1000px) {
+  .brand_layer_popup .layer_inner {left: 0; width: 100%; max-height: 80vh; padding: 20px 4vw; border-radius: 0; }
+  .brand_layer_popup .context {flex-direction: column; align-items: flex-start;}
+  .brand_layer_popup .context .b_slogan {font-size: 20px;}
+  .brand_layer_popup .context .b_text {font-size: 14px;}
+  
+  .brand_layer_popup .thumb_box .tmb_left {font-size: 20px;}
+  .brand_layer_popup .thumb_box .tmb_right .mall_link, .brand_layer_popup .thumb_box .tmb_right .cont_link {font-size: 14px;}
+  .brand_layer_popup .thumb_box .scroll_box {white-space: nowrap; overflow: auto; justify-content: unset; gap: 1.5vw;}
+  .brand_layer_popup .thumb_box .scroll_box .scroll_item { width: 180px;}
+  .brand_layer_popup .context .textbox {width: 100%;}
+}
+
+@media (max-width: 640px) {
+  .brand_layer_popup .thumb_box .scroll_box {display: block;}
+  .brand_layer_popup .thumb_box .scroll_box .scroll_item {width: 160px;}
+  .brand_layer_popup .thumb_box .scroll_box .thumb_nm {font-size: 16px;}
+}

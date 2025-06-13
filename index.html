@@ -15,10 +15,392 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/Favicon-32.png" type="image/x-icon" sizes="32x32">
+  <link rel="shortcut icon" href="./images/Favicon-18.png" type="image/x-icon" sizes="18x18">
+  <link rel="shortcut icon" href="./images/Favicon-180.png" type="image/x-icon" sizes="180x180">
   
+  <!-- style -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/contents.css">
+
+  
+  <!-- script -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script src="./js/common.js"></script>
+
   <title>hbs주식회사</title>
 </head>
-<body>
-  aaa
+<body data-top="no-top">
+  <!-- header -->
+  <header id="header">
+    <div class="wrap">
+      <h1 class="logo_box"><a href="/" class="logo">에이치비에스 주식회사</a></h1>
+      <button type="button" class="menu_open">메뉴열기</button>
+      <div class="gnb_contain"></div>
+      <div class="gnb">
+        <div class="gnb_top">
+          <h2 class="logo_box"><a href="/" class="logo_inner_type">에이치비에스 주식회사</a></h2>
+          <button type="button" class="menu_close">메뉴닫기</button>
+        </div>
+        <!-- 전체메뉴 -->
+        <div class="depth depth1">
+          <ul class="depth_list depth1_list">
+            <!-- js에서 메뉴 불러옴 -->
+          </ul>          
+        </div>         
+        <!-- //상단공 전체메뉴 -->
+         <div class="m_line"></div>
+         <div class="header_copyright">Copyright &copy; <span id="this_year"></span> hbs Coporation.<br>All Rights Reserved.</div>
+      </div>        
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- main content -->
+  <div id="container" class="main">    
+    <div class="sec01">
+      <!-- slider -->
+      <div class="swiper visual_slide">
+        <div class="textbox">
+          <div class="holding">
+            <span class="change on">Total Solutions</span>
+            <span class="change">ALL FOR ONE, ONE FOR ALL</span>
+            <span class="change">Professionalism & Passion</span>
+          </div>
+          <div class="slogan">산업 통합 시스템 선도기업 , 에이치비에스</div>
+        </div>
+        <ul class="slide_paging">
+          <li class="active on">
+            <button type="button">
+              <span class="btn_name">01<span class="mo_hide">. Solutions</span> </span>
+              <span class="btn_line"><span class="btn_bar"></span></span>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <span class="btn_name">02 <span class="mo-hide">. Product</span> </span>
+              <span class="btn_line"><span class="btn_bar"></span></span>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <span class="btn_name">03 <span class="mo-hide">. Technology</span></span>
+              <span class="btn_line"><span class="btn_bar"></span></span>
+            </button>
+          </li>
+        </ul>
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide slide_item"><div class="bg"></div><img src="./images/visual1.jpg" alt="1번 슬라이드 이미지"></div>
+          <div class="swiper-slide slide_item"><div class="bg"></div><img src="./images/visual2.jpg" alt="2번 슬라이드 이미지"></div>
+          <div class="swiper-slide slide_item"><div class="bg"></div><img src="./images/visual3.jpg" alt="3번 슬라이드 이미지"></div>
+        </div>
+      </div>
+      <!-- //slider -->
+     <div class="scrolling">
+      SCROLL
+      <span calss="line"><span class="line_bar"></span></span>
+     </div>
+    </div>  
+    <!-- //sec01 -->
+
+    <!-- Cooperative Brand -->
+    <div class="sec02" >
+      <div class="brand_slogan waypoint">Corperative Brand</div>
+      <div class="brand_text waypoint">에이치비에스와 함께하는 브랜드<br/>그 이상의 가치를 연결하고자 합니다.</div>
+      <div class="mask_text type1 waypoint">
+        <span class="zoom_circle zoom_circle1 on"></span>
+        <span class="zoom_circle zoom_circle2"></span>
+        <span class="zoom_circle zoom_circle3"></span>
+        <span class="zoom_circle zoom_circle4"></span>
+        <span class="zoom_circle zoom_circle5"></span>
+        <span class="zoom_circle zoom_circle6"></span>
+        <span class="zoom_circle zoom_circle7"></span>
+        <span class="zoom_circle zoom_circle8"></span>
+      </div>
+      <!-- brand -->
+      <div class="conbox waypoint">
+        <div class="tab_box">
+          <button type="button" class="brand_tab active">효성 모터</button>
+          <button type="button" class="brand_tab">ABB</button>
+          <button type="button" class="brand_tab">윌로펌프</button>
+          <button type="button" class="brand_tab">그런포스펌프</button>
+          <button type="button" class="brand_tab">데스미펌프</button>
+          <button type="button" class="brand_tab">DANFOSS</button>
+          <button type="button" class="brand_tab">감속기</button>
+          <button type="button" class="brand_tab">자동제어판넬</button>
+        </div>
+        <div class="matchbox">
+          <div class="matchtext active">앞선 기술력과 최고 품질의 제품을 자랑하는<br>효성모터는 고객과 함께 미래를 여는 기업입니다.</div>
+          <div class="matchtext">산업의 디지털 변화를 주도하는 기술 리더 <br>ABB는 소프트웨어를 전기화, 로보틱스, 자동화, 모션 포트폴리오 연구를 이어갑니다.</div>
+          <div class="matchtext">세계적인 펌프 및 펌프 시스템 제조기업<br>윌로펌프는 고효율 펌프, 시스템, 솔루션을 제공하는 기업입니다.</div>
+          <div class="matchtext">그런포스펌프는 다양한 산업 분야의 공장 및 산업용 건물을 대상으로<br>펌프와 펌프 시스템에 대한 에너지를 진단하는 산업용 펌프 전문기업입니다.</div>
+          <div class="matchtext">데스미펌프는 해양 응용 분야 관련 낮은 에너지 소비 및 고성능 작동을 보장하는<br>고효율 & 신뢰할 수 있는 선박용 펌프 솔루션 기업입니다.</div>
+          <div class="matchtext">댄포스는 품질, 신뢰성 및 혁신에 대한 타협하지 않는 집중을 통해<br>스마트하고 에너지 효율적인 제품, 서비스 및 솔루션을 제공함으로써<br>고객들이 보다 지속 가능한 세상을 만들 수 있도록 돕습니다.</div>
+          <div class="matchtext">분야별 사용에 용이한 우수한 감속기를 추천합니다.</div>
+          <div class="matchtext">시스템제어(판넬) 설계부터 제작, 시운전까지 끊임없는 기술력 향상과 최고의 서비스로<br>고객에게 자동제어판넬을 제공합니다.</div>
+        </div>
+        <div class="linkbox"><a href="#">바로가기</a></div>
+      </div>
+
+      <!-- banner -->
+      <div class="main_banner waypoint">
+        <div class="bg"></div>
+        <a href="#">
+          <div class="banner_name">궁금한 사항이 있으신가요?</div>
+          <div class="banner_link">문의하기</div>
+        </a>
+      </div>
+    </div>
+    <!-- //Cooperative Brand -->
+
+    <!-- Product -->
+    <div class="sec03">
+      <div class="main_inner">
+        <div class="product_box waypoint">
+          <div class="flexbox">
+            <div class="title"><span>에이치비에스</span><br>PRODUCT</div>
+            <a href="#" class="go_product">상품 더보기</a>
+          </div>
+          <div class="product_conbox">
+            <div class="product_item">
+              <a href="#" class="link_icon">
+                <img src="./images/product1.jpg" alt="프로덕트 이미지1">
+                <div class="link_deco"></div>
+              </a>
+            </div>
+            <div class="product_item">
+              <a href="#" class="link_icon">
+                <img src="./images/product2.jpg" alt="프로덕트 이미지2">
+                <div class="link_deco"></div>
+              </a>
+            </div>
+            <div class="product_item">
+              <a href="#" class="link_icon">
+                <img src="./images/product3.jpg" alt="프로덕트 이미지3">
+                <div class="link_deco"></div>
+              </a>
+            </div>
+            <div class="product_item">
+              <a href="#" class="link_icon">
+                <img src="./images/product4.jpg" alt="프로덕트 이미지4">
+                <div class="link_deco"></div>
+              </a>
+            </div>
+            <div class="product_item">
+              <a href="#" class="link_icon">
+                <img src="./images/product5.jpg" alt="프로덕트 이미지5">
+                <div class="link_deco"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //Product -->
+
+    <!-- notice -->
+    <div class="sec04">
+      <div class="layout">
+        <div class="top_bx">
+          <div class="notice_tit">
+            <span>NEWS</span>
+            <strong>에이치비에스<br>최신 소식을 전해 드립니다.</strong>
+          </div>
+          <div class="notice_btn">
+            <a href="#" class="btn_arr"><span>View more</span></a>
+          </div>
+        </div>
+        <div class="slide_notice">
+          <ul class="slide">
+            <li>
+              <a href="#">
+                <strong>참약사, AI헬스케어 글로벌 혁신특구사업 선정</strong>
+                <p>참약사(대표 김병주)가 중소벤처기업부 시행하는 '강원 AI헬스케어 글로벌 혁신특구사업'에 최종 선정됐다.</p>
+                <div>
+                  <span class="date">2024-10-23</span>
+                  <span class="more">MORE</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <strong>누적 투자유치 300억 엔테로바이옴, 투자성공 유치 요인은</strong>
+                <p>마이크로바이옴 신약 개발업체 엔테로바이옴이 바이오 투자 한파 속에도 성공적인 투자유치를 이어가며, 주목받고 있다. 차별화된 기술, 수익화 가능성 높은 파이프라인, 조기 매출 실현 등이 자금유치의 성공요인으로 꼽힌다.</p>
+                <div>
+                  <span class="date">2024-10-23</span>
+                  <span class="more">MORE</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <strong>"나부터 바른 금융" iM투자파트너스, 내부 교육 강화</strong>
+                <p>DGB금융그룹 계열사인 iM투자파트너스는 그룹의 내부통제 강화 기조에 발맞춰 내부통제 교육 및 정책을 강화하고 있다고 23일 밝혔다.</p>
+                <div>
+                  <span class="date">2024-10-23</span>
+                  <span class="more">MORE</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <strong>“AI가 스코어카드와 골프백도 관리”..김캐디, 신규 서비스 출시</strong>
+                <p>골프예약 플랫폼 김캐디가 AI를 이용해 스코어와 골프백을 한 번에 관리할 수 있는 새로운 서비스를 선보였다. 이번에 출시된 ‘스코어’와 ‘골프백’ 기능은 김캐디를 이용하는 모든 골퍼가 무료로 이용할 수 있으며, 골퍼들의 골프 생활을 체계적으로 관리해 준다. </p>
+                <div>
+                  <span class="date">2024-10-23</span>
+                  <span class="more">MORE</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <strong>iM뱅크, 여성 사외이사 선임해 '젠더 다양성' 약점 보완</strong>
+                <p>iM뱅크가 여성 사외이사 후보를 새로 추전하며 이사회 진용을 보강했다. 정기 주주총회를 앞둔 연초가 아닌 연중에 사외이사 후보를 추천하는 건 이례적인 행보다.</p>
+                <div>
+                  <span class="date">2024-10-23</span>
+                  <span class="more">MORE</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <strong>진모빌리티, 日 MK택시와 손잡고 해외 진출</strong>
+                <p>아이엠(i.M)택시를 운영하는 모빌리티 플랫폼 진모빌리티가 ‘친절택시의 대명사’인 일본 MK택시와 양해각서(MOU)를 체결하고 해외 시장 진출을 본격화한다고 9일 밝혔다.</p>
+                <div>
+                  <span class="date">2024-10-23</span>
+                  <span class="more">MORE</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <strong>다비오, AI 기술로 도시 변화탐지 사업 가속화</strong>
+                <p>공간정보 AI 기술기업 다비오(Dabeeo)는 국토교통부 국토지리정보원이 추진하는 ‘1:1000 수치지형도 고도화 시범사업’을 지난 6월 성료했다고 8일 밝혔다.</p>
+                <div>
+                  <span class="date">2024-10-23</span>
+                  <span class="more">MORE</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <strong>더웨이브톡, 2024 SIWW 수질 모니터링·오염물 분석 세션에서 우승</strong>
+                <p>AI 딥러닝 수질 센서 전문 기업 더웨이브톡(대표 김영덕)이 싱가포르 국제 물 주간(Singapore International Water Week, 이하 SIWW) 프로그램 중 하나인 TechXchange의 수질 모니터링/오염물 분석 세션(Water Quality Monitoring/Contaminants Analysis Session)에서 우승했다고 21일 밝혔다.</p>
+                <div>
+                  <span class="date">2024-10-23</span>
+                  <span class="more">MORE</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <strong>DGB(iM)금융지주, 6월 금융지주 브랜드평판 1위 올라</strong>
+                <p>최근 시중은행으로 전환한 DGB(iM)금융지주가 올 6월 금융지주 브랜드평판 1위에 올랐다. 하나금융, 한국금융, 신한금융지주, BNK금융지주 등 전통적으로 브랜드평판이 높은 금융지주들이 6월 지수가 하락한 데 반해 DGB금융의 브랜드평판지수는 올랐다.</p>
+                <div>
+                  <span class="date">2024-10-23</span>
+                  <span class="more">MORE</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <strong>허니냅스, FDA 승인에 힘입어… 美 160여개 병원·연구소 상담</strong>
+                <p>국내 인공지능(AI) 수면 데이터 분석 전문 기업인 허니냅스(HoneyNaps)는 이달 1일부터 5일까지 미국 휴스턴에서 개최된 세계 최대 수면 학술대회인 ‘Sleep 2024′에서 미국 현지 병원과 연구소 등, 약 160여 개 글로벌 기관들과 수주상담을 진행했다고 11일 밝혔다.</p>
+                <div>
+                  <span class="date">2024-10-23</span>
+                  <span class="more">MORE</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <strong>노태그코리아, 모다모다 등 K뷰티 브랜드 대만 3대 유통체인 입점</strong>
+                <p>무역·유통 스타트업 노태그코리아가 '모다모다 샴푸', '팜스킨', '코코스타' 등 K뷰티 브랜드 상품들을 대만 3대 뷰티 소매기업인 왓슨, 모모, 코즈메에 입점시켰다고 7일 밝혔다.</p>
+                <div>
+                  <span class="date">2024-10-23</span>
+                  <span class="more">MORE</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <strong>‘재생 플라스틱’ 리플라, 100억 시리즈A 클로징 임박</strong>
+                <p>플라스틱 분해 기술로 재생 플라스틱의 순도를 높이는 기술을 개발하는 리플라가 100억원 규모 시리즈A 라운드를 진행 중이다. 현재 90% 가량 투자금이 모인 상태다. 회사는 투자금을 활용해 공장을 새로 짓고 매출 확대에 총력을 기울일 계획이다.</p>
+                <div>
+                  <span class="date">2024-10-23</span>
+                  <span class="more">MORE</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- //notice -->
+
+    <!-- shop -->
+     <div class="sec05 waypoint">
+      <div class="bg"></div>
+      <a href="#">
+        <div class="title">에이치비에스 쇼핑몰</div>
+        <div class="link">hbs SHOP</div>
+      </a>      
+     </div>
+    <!-- //shop -->
+  </div>
+  <!-- //main content -->
+
+  <!-- footer -->
+  <div id="footer"> 
+  <div class="wrap">
+    <div class="footer_top">
+      <div class="footer_logo">
+        <img src="./images/footer_logo.png" alt="하단로고">
+      </div>
+      <div class="dropdown_box">
+        <div class="family_site link_list">
+          <button type="button" class="link_open" title="열기">FAMILY SITE</button>
+          <ul>
+            <li><a href="#" target="_blank" title="새창">하이젠모터</a></li>
+            <li><a href="#" target="_blank" title="새창">ABB</a></li>
+            <li><a href="#" target="_blank" title="새창">윌로펌프</a></li>
+            <li><a href="#" target="_blank" title="새창">그런포스펌프</a></li>
+            <li><a href="#" target="_blank" title="새창">데스미펌프</a></li>
+          </ul>
+        </div>
+      </div>      
+    </div>
+    <div class="footer_bottom">
+      <div class="linkbox">
+        <ul>
+          <li><a href="#" target="_blank">사업자정보확인</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">이메일무단수집거부</a></li>
+          <li><a href="#">문의하기</a></li>
+        </ul>
+      </div>
+      <div class="corp_info">
+        <span>대표이사 : 배수영</span>
+        <span>사업자등록번호 : 705-87-01099</span>
+        <span>주소 : 부산광역시 사상구 괘감로 37, 1동 119호 ~ 121호(괘법동, 산업용품유통상가)</span>
+      </div>
+      <div class="corp_info">
+        <span>대표번호 : 051-319-3111</span>
+        <span>FAX : 051-319-3113</span>
+        <span>이메일 : hbs@hbsolution.kr</span>
+      </div>
+      <p class="copyright">&copy; <span id="this_year"></span> HBS All Rights Reserved</p>
+    </div>
+  </div>
+  </div>
+  <!-- //footer -->
+
+  <script src="./js/waypoints.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>

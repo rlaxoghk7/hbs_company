@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+.notice .total {font-size: 20px; font-weight: 300; margin-bottom: 30px; padding-left: 10px;}
+.notice .table {border-collapse: collapse; border-top: 1px solid #292929;}
+.notice table.table th, .notice table.table td {padding: 18px 20px; font-size: 20px; text-align: center;}
+.notice table.table th {font-weight: 600;}
+.notice table.table td {border-top: 1px solid #ccc;}
+.notice table.table td a:hover {text-decoration: underline; text-underline-position: under;}
+.notice table.table td:nth-child(2) {text-align: left;}
+.notice table.table tr:last-child {border-bottom: 1px solid #ccc;}
+
+.notice .pagenation {font-size: 0; text-align: center; margin-top: 50px; color: transparent;}
+.notice .pagenation > div {display: inline-block; vertical-align: middle;}
+.notice .pagenation .page_navi a {width: 20px; height: 20px; position: relative;}
+
+.notice .pagenation .page_navi.next a::before {transform: scaleX(-1);}
+
+.notice .pagenation .page_navi a.prev_btn5::before, .notice .pagenation .page_navi a.next_btn5::before {background-position-y: -12px;}
+.notice .pagenation .page_navi a:hover::before {background-position-x: -15px;}
+.notice .pagenation .page_track a::after {content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px; background-color: #292929; }
+
+.notice .pagenation .page_navi a::before {content: ''; display: block; position: absolute; background: url(../images/arrow_left.png) no-repeat left top; top: calc(50% - 6px); left: calc(50% - 7px); width: 14px; height: 12px;}
+
+.notice .pagenation .page_track {margin: 0 20px}
+.notice .pagenation .page_track a {font-size: 10px; position: relative; text-align: center; min-width: 20px; padding: 0 5px;}
+.notice .pagenation .page_track a.now {color: #292929; font-size: 18px; cursor: initial;}
+.notice .pagenation .page_track a.now::after {background-color: #292929; display: block; }
+
+.view .context .topbox {text-align: center; margin-bottom: 50px; position: relative;}
+.view .context .topbox::after {content: ''; display: block; position: absolute; width: 100%; height: 1px; background-color: #292929; bottom: -30px; left: 0;}
+.view .context .topbox .title {font-size: 40px; font-weight: 600; margin-bottom: 30px; line-height: 60px; word-break: keep-all;}
+.view .context .topbox .date {font-size: 20px; font-weight: 400;}
+.view .context .botbox {margin: 50px 0;}
+.view .context .botbox .viewtext {text-align: center;}
+.view .context .botbox .viewtext .subtit {font-size: 26px; font-weight: 600; padding: 40px 0 100px; line-height: 50px;}
+.view .context .botbox .viewtext .detail_info {text-align: left; line-height: 40px; word-break: keep-all;}
+.view .context .botbox .viewtext .detail_info h3 {font-size: 22px; font-weight: 600;}
+
+.view .page_controller {border-top: 1px solid #292929;}
+.view .page_controller .link_line {padding: 20px 0; border-bottom: 1px solid #ccc;}
+.view .page_controller .link_line span.text::before {content: '';display: inline-block; width: 15px; height: 15px; background: url(../images/arrow_up.png) no-repeat center; margin-right: 10px;}
+.view .page_controller .link_line:last-child span.text::before {transform: scaleY(-1); vertical-align: middle;}
+
+.view .page_controller .link_line span {width: 150px; font-size: 18px; font-weight: 300; text-align: center; vertical-align: middle;}
+.view .page_controller .link_line a {width: 880px; font-size: 18px; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 30px; vertical-align: middle; color: #292929;}
+.view .page_controller .link_line a.disabled {color: #ccc; cursor: initial;}
+
+.view .return_list {margin: 50px 0; text-align: center;}
+.view .return_list a { line-height: 50px; width: 500px; font-size: 20px; color: #fff; background-color: #292929; font-weight: 500; border-radius: 5px;}
+
+/* 자료실 */
+.data_list .context {display: flex; justify-content: space-between; align-items: center; position: relative; border-bottom: 1px solid #ccc; padding: 50px 0;}
+.data_list .context .title {font-size: 24px; font-weight: 600; margin-bottom: 16px; line-height: 30px; color: #292929;}
+.data_list .context .subtit { font-size: 18px; font-weight: 400; color: #bbb; line-height: 26px;}
+.data_list .context .imgbox {width: 140px; height: 140px;}
+.data_list .context .imgbox img {border: 1px solid #ccc; border-radius: 10px; width: 100%; height: 100%; object-fit: cover; object-position: center;}
+
+.notice .pagenation.mtb {margin:100px 0 50px; }
+
+@media (max-width: 1200px) {
+  .cont_head {margin: 70px 0;}
+}
+
+@media (max-width: 1000px) {
+  .cont_head {display: none;}
+  .cont_head.t_block {display: block;}
+
+  .view .context {margin-top: 80px;}
+  .view .context .topbox {text-align: left;}
+  .view .context .botbox .viewtext .subtit {font-size: 20px; line-height: 30px;}
+  .view .context .botbox .viewtext .detail_info {font-size: 16px; line-height: 30px;}
+  .view .page_controller .link_line span {width: 80px; font-size: 15px;}
+  .view .page_controller .link_line a {width: calc(100% - 200px); font-size: 15px;}
+  .view .return_list a {width: 100%;}
+
+  .data_list .context .title {font-size: 20px;}
+
+  
+
+}
+
+@media (max-width: 640px) {
+  .notice .total {font-size: 16px;}
+  .notice table.table colgroup col {width: auto !important}
+  .notice table.table thead {display: none;}
+
+  .notice table.table td {display: block; border: none; padding: 5px 10px; text-align: left; font-size: 18px; line-height: 24px;}
+  .notice table.table td.number::before {content: attr(data-name) '.'; display: inline-block;}
+  .notice table.table tr {display: block; padding: 10px 0; width: 100%; border-bottom: 1px solid #ccc;}
+
+  .view .context .topbox .date {font-size: 15px;}
+
+  .cont_head {margin-bottom: 20px;}
+  .data_list .context {width: 100%; flex-direction: column-reverse; align-items: flex-start; border-bottom: none; padding: 20px 0;}
+  .data_list .context .imgbox {width: 100%; height: 100%; margin-bottom: 20px;}
+  .data_list .context .textbox {padding: 0 10px;}
+  .data_list .context .textbox .title {font-size: 20px; margin-bottom: 10px; line-height: 24px;}
+  .data_list .context .textbox .subtit {font-size: 12px; line-height: 20px;}
+  
+}

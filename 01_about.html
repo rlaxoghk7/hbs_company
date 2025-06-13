@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="에이치비에스 기업 사이트">
+  <meta name="keywords" content="산업 통합 시스템 선도기업, 모터, 선박, 에이치비에스, hbs">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="에이치비에스">
+  <meta property="og:site_url" content="https://hbs-company.vercel.app/">
+  <meta property="og:title" content="에이치비에스">
+  <meta property="og:description" content="산업통합시스템 선도기업">
+  
+  <meta property="og:image" content="https://hbs-company.vercel.app/images/og-600.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/Favicon-32.png" type="image/x-icon" sizes="32x32">
+  <link rel="shortcut icon" href="./images/Favicon-18.png" type="image/x-icon" sizes="18x18">
+  <link rel="shortcut icon" href="./images/Favicon-180.png" type="image/x-icon" sizes="180x180">
+  
+  <!-- style -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/contents.css">
+
+  
+  <!-- script -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script src="./js/common.js"></script>
+  
+
+  <title>hbs주식회사</title>
+</head>
+<body data-top="no-top">
+  <!-- header -->
+  <div id="header"></div>
+  <script>
+    fetch('/inc/top_menu.html')
+      .then(res => res.text())
+      .then(html => {
+        document.querySelector('#header').innerHTML = html;
+      });
+  </script>
+  <!-- //header -->
+
+  <!-- about content -->
+  <div id="container" class="hbs_about hbs_corp">
+    <!-- 상단이미지 -->
+    <div id="sub_banner">
+      <div class="sub_visual">
+        <div class="visual_img"></div>
+      </div>  
+      <h2 class="page_name"></h2>
+      <div class="path_wrap">
+        <ul class="path_list">
+          <!-- javascript에서 불러오기 -->
+          <!-- <li class="path_item active"><a href="./about.html" class="path_text">인사말</a></li>
+          <li class="path_item"><a href="./certi.html" class="path_text">인증서</a></li>
+          <li class="path_item"><a href="./location.html" class="path_text">오시는길</a></li> -->
+        </ul>
+      </div>
+    </div>  
+    <!-- //상단이미지 -->
+
+    <!-- sub content -->
+    <div id="content">
+      <div class="sub_tabbox">
+        <ul class="tab_list">         
+          <li class="active"><button type="button" class="tab_btn" >인사말</button></li>
+          <li><button type="button" class="tab_btn" >미션 & 비젼</button></li>
+          <li><button type="button" class="tab_btn" >슬로건</button></li>
+        </ul>
+      </div>
+
+      <!-- tab 내용 -->
+       <div class="tab_match">
+        <!-- tab1 -->
+        <div class="matchbox active pb_80">
+          <div class="inner_wrap">
+            <div class="title">
+              산업 관련 토탈 시스템을 갖추어 <span>기업가 정신을 바탕</span>으로<br>고객 만족을 실천하는 기업, 에이치비에스
+            </div>
+            <div class="ceo_left">
+              <div class="text">저희 에이치비에스 주식회사는 1988년 창립 이래 모터, 감속기, 팬, 인버터 및 자동제어시스템 제조까지 산업 관련 토탈 시스템을 갖추어 고객 만족을 실천하고 있습니다.<br><br>산업토탈 시스템과 더불어 독자적인 물류 시스템 구축으로 다양하고 충분한 제품을 확보 하였으며 빠른 납기와 저렴한 가격으로 고객님의 요구를 충족시켜 드리겠습니다.</div>
+            </div>
+            <div class="ceo_right">
+              <div class="text">또한 전 직원이 ALL FOR ONE, ONE FOR ALL이라는 기본 원칙 아래 고객과 에이치비에스는 하나임을 명심하고 고객 만족을 실천하기 위해 더욱 노력하여 고객과 함께 WIN-WIN하는 에이치비에스이 되겠습니다.<br><br>에이치비에스는 사회적 책임을 다하고 여러 이해관계자와 공감하며 정직하고 올바른 방향으로 기업의 역할을 수행하기 위한 정도경영을 추구합니다. 임직원 모두가 의미 있는 역할을 다할 것을 약속드립니다. 하루하루 새롭게 성장하는 에이치비에스의 모습을 기대해 주시기 바랍니다.</div>
+            </div>
+            <div class="ceo_box">
+              <div class="ceo_nm">에이치비에스 대표이사 <span>배 수 영</span></div>
+            </div>
+          </div>
+        </div> 
+        <!-- tab2 -->
+        <div class="matchbox pb_80">
+          <div class="inner_wrap">
+            <div class="title_box">
+              <div class="subject">Mission</div>
+              <div class="title grey"><span>산업의 시작부터</span> 완성까지<br><span>명실 상부</span> 대한민국 최고의 시스템 제공자로서<br>산업기기 <span>토탈 시스템을 제공</span>합니다.</div>
+              <div class="text">모터, 펌프, 인버터, 자동화 제어 시스템 설계 및 제작(전기 제어 판넬 제작)까지<br>토탈 시스템을 제공하여 명실 상부 산업기기 대한민국 최고의 시스템 제공자로 어뜸나기 위해 전임직원이 노력하고 있습니다.</div>
+            </div>
+          </div>  
+          <div class="full_img">
+            <div class="subject">Vision</div>
+            <div class="title">토탈 시스템<br>산업 통합 시스템 선도기업, 에이치비에스</div>
+          </div>
+          <div class="inner_wrap">
+            <div class="circlebox">
+              <ul>
+                <li><span>자동제어 시스템(PLC)</span>설계 및 제작</li>
+                <li><span>서버로봇 시스템</span></li>
+                <li><span>모터, 펌프, 인버터</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- tab3 -->
+        <div class="matchbox">  
+          <div class="inner_wrap slogan">        
+            <div class="title"><span>ALL FOR ONE, ONE FOR ALL</span></div>
+            <div class="text">고객인식, 고객욕구 파악, 고객가치 창출과 고객과 하나라는 생각으로<br>혼을 담은 제품과 서비스로 상호협력과 신뢰형성을 위해 노력하겠습니다.</div>          
+          </div>  
+          <div class="full_img">
+            <img src="./images/slogan_img.png" alt="슬로건 이미지">
+          </div>
+        </div>
+       </div>
+      <!-- //tab 내용 -->
+    </div>
+    <!-- //sub content -->
+  </div>
+
+  <!-- //about content -->
+
+  <!-- footer -->
+  <div id="footer"></div>
+  <script>
+    fetch('/inc/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.querySelector('#footer').innerHTML = html;
+
+        const script = document.createElement('script');
+        script.src = './js/main.js';
+        document.body.appendChild(script);
+      });
+  </script>
+  <!-- //footer -->
+ <script src="./js/sub.js"></script>
+   
+</body>
+</html>

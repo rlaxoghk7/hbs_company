@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="에이치비에스 기업 사이트">
+  <meta name="keywords" content="산업 통합 시스템 선도기업, 모터, 선박, 에이치비에스, hbs">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="에이치비에스">
+  <meta property="og:site_url" content="https://hbs-company.vercel.app/">
+  <meta property="og:title" content="에이치비에스">
+  <meta property="og:description" content="산업통합시스템 선도기업">
+  
+  <meta property="og:image" content="https://hbs-company.vercel.app/images/og-600.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/Favicon-32.png" type="image/x-icon" sizes="32x32">
+  <link rel="shortcut icon" href="./images/Favicon-18.png" type="image/x-icon" sizes="18x18">
+  <link rel="shortcut icon" href="./images/Favicon-180.png" type="image/x-icon" sizes="180x180">
+  
+  <!-- style -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/contents.css">
+
+  
+  <!-- script -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script src="./js/common.js"></script>
+  
+
+  <title>hbs주식회사</title>
+</head>
+<body data-top="no-top">
+  <!-- header -->
+  <div id="header"></div>
+  <script>
+    fetch('/inc/top_menu.html')
+      .then(res => res.text())
+      .then(html => {
+        document.querySelector('#header').innerHTML = html;
+      });
+  </script>
+  <!-- //header -->
+
+  <!-- about content -->
+  <div id="container" class="hbs_about hbs_notice">
+    <!-- 상단이미지 -->
+    <div id="sub_banner">
+      <div class="sub_visual">
+        <div class="visual_img"></div>
+      </div>  
+      <h2 class="page_name"></h2>
+      <div class="path_wrap">
+        <ul class="path_list">
+          <!-- javascript에서 불러오기 -->
+          <!-- <li class="path_item active"><a href="./about.html" class="path_text">인사말</a></li>
+          <li class="path_item"><a href="./certi.html" class="path_text">인증서</a></li>
+          <li class="path_item"><a href="./location.html" class="path_text">오시는길</a></li> -->
+        </ul>
+      </div>
+    </div>  
+    <!-- //상단이미지 -->
+
+    <!-- sub content -->
+    <div id="content">
+      <div class="cont_head t_block">
+        <div class="subject">data</div>
+        <div class="title">자료실</div>
+      </div>
+      <div class="inner_wrap notice">
+        <div class="total">총 <span>52</span>건</div>    
+        <!-- 자료실 리스트 -->
+        <div class="data_list">
+          <a href="./images/abb.pdf" class="context" target="_blank" title="새창">
+            <div class="textbox">
+              <div class="title">ABB 방폭모터 전동기 카달로그-2</div>
+              <div class="subtit">ABB 방폭모터 전동기 카달로그-2</div>
+            </div>
+            <div class="imgbox">
+              <img src="./images/data-1.png" alt="ABB product">
+            </div>
+          </a>
+          <a href="./images/abb.pdf" class="context" target="_blank" title="새창">
+            <div class="textbox">
+              <div class="title">B 방폭모터 전동기 카달로그-2</div>
+              <div class="subtit">B 방폭모터 전동기 카달로그-2</div>
+            </div>
+            <div class="imgbox">
+              <img src="./images/data-2.png" alt="ABB product">
+            </div>
+          </a>
+          <a href="./images/abb.pdf" class="context" target="_blank" title="새창">
+            <div class="textbox">
+              <div class="title">ABB 방폭모터 전동기 카달로그</div>
+              <div class="subtit">ABB 방폭모터 전동기 카달로그</div>
+            </div>
+            <div class="imgbox">
+              <img src="./images/data-3.png" alt="ABB product">
+            </div>
+          </a>
+          <a href="./images/abb.pdf" class="context" target="_blank" title="새창">
+            <div class="textbox">
+              <div class="title">ABB 저압 전동기 카달로그</div>
+              <div class="subtit">ABB 저압 전동기 카달로그</div>
+            </div>
+            <div class="imgbox">
+              <img src="./images/data-4.png" alt="ABB product">
+            </div>
+          </a>
+          <a href="./images/abb.pdf" class="context" target="_blank" title="새창">
+            <div class="textbox">
+              <div class="title">ABB KR_ACS880 Single Drive</div>
+              <div class="subtit">ABB KR_ACS880 Single Drive</div>
+            </div>
+            <div class="imgbox">
+              <img src="./images/data-5.png" alt="ABB product">
+            </div>
+          </a>
+        </div> 
+        <!-- //자료실 리스트 -->
+        <div class="pagenation mtb">
+          <div class="page_navi prev">
+            <a href="#" class="prev_btn5">이전 5페이지</a>
+            <a href="#" class="prev_btn">이전</a>
+          </div>
+          <div class="page_track"><a href="#" class="now">1</a></div>          
+          <div class="page_navi next">
+            <a href="#" class="next_btn">다음</a>
+            <a href="#" class="next_btn5">다음 5페이지</a>
+          </div>
+        </div>  
+      </div>      
+    </div>
+    <!-- //sub content -->
+  </div>
+
+  <!-- //about content -->
+
+  <!-- footer -->
+  <div id="footer"></div>
+  <script>
+    fetch('/inc/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.querySelector('#footer').innerHTML = html;
+
+        const script = document.createElement('script');
+        script.src = './js/main.js';
+        document.body.appendChild(script);
+      });
+  </script>
+  <!-- //footer -->
+ <script src="./js/sub.js"></script>
+   
+</body>
+</html>

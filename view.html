@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="에이치비에스 기업 사이트">
+  <meta name="keywords" content="산업 통합 시스템 선도기업, 모터, 선박, 에이치비에스, hbs">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="에이치비에스">
+  <meta property="og:site_url" content="https://hbs-company.vercel.app/">
+  <meta property="og:title" content="에이치비에스">
+  <meta property="og:description" content="산업통합시스템 선도기업">
+  
+  <meta property="og:image" content="https://hbs-company.vercel.app/images/og-600.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/Favicon-32.png" type="image/x-icon" sizes="32x32">
+  <link rel="shortcut icon" href="./images/Favicon-18.png" type="image/x-icon" sizes="18x18">
+  <link rel="shortcut icon" href="./images/Favicon-180.png" type="image/x-icon" sizes="180x180">
+  
+  <!-- style -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/contents.css">
+
+  
+  <!-- script -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script src="./js/common.js"></script>
+  
+
+  <title>hbs주식회사</title>
+</head>
+<body data-top="no-top">
+  <!-- header -->
+  <div id="header"></div>
+  <script>
+    fetch('/inc/top_menu.html')
+      .then(res => res.text())
+      .then(html => {
+        document.querySelector('#header').innerHTML = html;
+      });
+  </script>
+  <!-- //header -->
+
+  <!-- about content -->
+  <div id="container" class="hbs_about hbs_notice">
+    <!-- 상단이미지 -->
+    <div id="sub_banner">
+      <div class="sub_visual">
+        <div class="visual_img"></div>
+      </div>  
+      <h2 class="page_name"></h2>
+      <div class="path_wrap">
+        <ul class="path_list">
+    
+        </ul>
+      </div>
+    </div>  
+    <!-- //상단이미지 -->
+
+    <!-- sub content -->
+    <div id="content">
+      <div class="cont_head">
+        <div class="subject">notice</div>
+        <div class="title">공지사항</div>
+      </div>
+      <div class="inner_wrap view">
+         <div class="context">
+          <div class="topbox">
+            <div class="title">제 7기 정기 주주총회 소집 공고</div>
+            <div class="date">24.03.08</div>
+          </div>         
+        <!-- 공지내용 본문 -->
+          <div class="botbox">
+            <div class="viewtext">
+              <div class="subtit">제1호 의안.<br>제61기(2024.1.1 ~ 2024.12.31) 재무제표(이익잉여금처분계산서 포함) 및 연결재무제표 승인의 건</div>
+              <div class="detail_info"><h3>정기 주주총회</h3>
+                                      매 결산 후 1회 일정시기에 재무제표 승인 등을 위해 반드시 개최 상장(등록)회사에 있어서 <br>정기주주총회는 자본시장과 금융투자업에 관한 법률 제159조 4항에 의하여 사업연도 경과후 90일 이내에 주주총회에서 확정된 재무제표를 첨부한 사업보고서를 금융위원회와 거래소에 제출하게 되어 있어 이 기간 내에 총회를 개최하여야 함.
+                                      <br><br>            
+                                      <h3>임시 주주총회</h3>                                  
+                                      임시총회는 정관변경 등 소집권자(이사회)가 필요하다고 생각할 때 언제든지 소집가능. 임시총회의 권한이나 효력 및 절차 등은 정기총회에 준함
+                                      <br><br>        
+                                      <h3>종류 주주총회</h3>                                      
+                                      회사가 수종의 주식을 발행한 경우, 특정 종류의 주식을 가진 주주들만으로 구성되는 주주총회
+                                      <br><br>            
+                                      수종의 주식(상법 제344조) : 보통주,우선주,후배주,혼합주
+                                      종류주총을 필요로 하는 경우(상법 제 435조)
+                                      어느종류의 주주에게 손해를 미치게 되는 경우
+                                      주식의 종류에 따라 신주의 인수, 병합ㆍ분할ㆍ소각 또는 회사의 합병ㆍ분할로 인한 주식의 주식의 배정에 관하여 특수한 정함을 하는 경우
+              </div>
+            </div>
+          </div>
+        </div> 
+        <!-- page_controller -->
+        <div class="page_controller">
+          <div class="link_line">
+            <span class="text">Next</span>
+            <a href="#" class="next disabled">다음글이 없습니다.</a>
+            <span class="date"></span>
+          </div>
+          <div class="link_line">
+            <span class="text">Preview</span>
+            <a href="#" class="prev">제 7기 정기 주주총회 소집 공고2</a>
+            <span class="date">24.03.08</span>
+          </div>
+        </div>
+         <!--button  -->
+         <div class="return_list">
+          <a href="./04_notice.html">목록으로</a>
+         </div>
+      </div>      
+    </div>
+    <!-- //sub content -->
+  </div>
+
+  <!-- //about content -->
+
+  <!-- footer -->
+  <div id="footer"></div>
+  <script>
+    fetch('/inc/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.querySelector('#footer').innerHTML = html;
+
+        const script = document.createElement('script');
+        script.src = './js/main.js';
+        document.body.appendChild(script);
+      });
+  </script>
+  <!-- //footer -->
+ <script src="./js/sub.js"></script>
+   
+</body>
+</html>

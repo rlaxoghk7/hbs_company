@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+.cont_head {margin: 100px 0; text-align: center;}
+.cont_head .subject {font-size: 24px; margin-bottom: 10px; text-transform: uppercase;}
+.cont_head .title {font-size: 42px; font-weight: 700;}
+
+.location_nm {font-size: 26px; font-weight: 600; margin-bottom: 30px;}
+.location_info {font-size: 20px; line-height: 20px; margin-bottom: 40px; line-height: 30px; color: #292929;}
+.location_info .dl_line {display: flex;}
+.location_info .dl_line + .dl_line {margin-top: 30px;}
+.location_info .dl_line dt {font-weight: 600; width: 30px; }
+.location_info .dl_line dd {font-weight: 200; width: calc(100% - 30px); word-break: keep-all;}
+
+.map {margin-bottom: 100px;}
+
+/* 견적문의 */
+.doc_content {padding: 0 30px 100px;}
+.doc_content .conbox {display: flex;}
+.doc_content .conbox + .conbox {margin-top: 30px;}
+.doc_content .conbox .con_title {width: 150px; font-size: 24px; font-weight: 600; position: relative; padding-top: 10px;}
+.doc_content .conbox .con_title::before {content: ''; display: block; position: absolute; width: 5px; height: 5px; background-color: #2C6EAC; top: 20px; left: -20px; border-radius: 50%;}
+.doc_content .conbox .con_input {width: calc(100% - 150px); position: relative;}
+.doc_content .conbox .con_input input[type='email'], .doc_content .conbox .con_input input[type='tel'], .doc_content .conbox .con_input input[type='text'] {width: 100%; height: 50px; border: 1px solid #e4e4e4; border-radius: 5px; padding: 0 10px; font-size: 18px; font-weight: 600;}
+.doc_content .conbox .con_input textarea {position: relative; width: 100%; height: 300px; border-radius: 5px; border: 1px solid #e4e4e4; padding: 10px 10px; font-size: 18px; resize: none; line-height: 30px; font-weight: 600;}
+.doc_content .conbox .con_input .word_count {position: absolute; bottom: 20px; right: 30px; font-size: 16px; color: #ccc; pointer-events: none;}
+.doc_content .conbox .con_input .upload-name {height: 50px; font-size: 18px; color: #ccc; background-color: #eee; border-radius: 5px 0 0 5px; font-weight: 300; padding: 0 10px;}
+.doc_content .conbox .con_input .upload-name + label {line-height: 50px; background-color: #292929; font-size: 18px; color: #fff; width: 120px; text-align: center; vertical-align: top; border-radius: 0 5px 5px 0;}
+.doc_content .conbox .con_input .upload-hidden {position: absolute; display: none;}
+
+.doc_content .privacy_agree {margin-top: 50px; position: relative;}
+.doc_content .privacy_agree #privacy {/*position: absolute; top: 50%; left: 50%;*/ display: none;}
+.doc_content .privacy_agree #privacy:checked + .fake_chk .label label {background: #fff url(../images/check-blue.svg) no-repeat center / 16px;}
+.doc_content .privacy_agree .fake_chk {position: relative; text-align: center;}
+.doc_content .privacy_agree .label {background-color: #eee; border-radius: 30px; padding: 10px 20px;}
+.doc_content .privacy_agree .label label {width: 24px; height: 24px; margin-right:10px; background-color: #fff; border-radius: 50%; vertical-align: middle; }
+.doc_content .privacy_agree #privacy:checked + .fake_chk .label {color: #fff; background-color: #2C6EAC;}
+.doc_content .privacy_agree .fake_chk button {font-size: 18px; font-weight: 500;}
+.doc_content .privacy_agree .fake_chk button span{text-decoration: underline; text-underline-position: under;}
+
+
+/* 개인정보 이용정책 팝업 */
+.privacy_agree .privacy_popup.active {display: block;}
+.privacy_agree .privacy_popup {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.7); display: none; z-index: 100;}
+.privacy_agree .privacy_popup .pop_inner {width: 1000px; position: absolute; top: 100px; left: 50%; transform: translateX(-50%);}
+.privacy_agree .privacy_popup .pop_close {width: 20px; height: 20px; background: url(../images/close2.svg) no-repeat center / contain; position: absolute; top: -35px; right: 0; font-size: 0; color: transparent;}
+.privacy_agree .privacy_popup .privacy_box::-webkit-scrollbar {width: 4px;} 
+::-webkit-scrollbar-thumb {background-color: rgba(0,0,0,.7);}
+
+.privacy_popup .privacy_box {background-color: #fff; overflow: auto; height: 70vh; padding: 30px; border-radius: 10px 10px 0 0;}
+.privacy_popup .privacy_box .first_context {margin-bottom: 50px; padding-bottom: 50px; border-bottom: 1px solid #292929;}
+.privacy_popup .privacy_box .first_context p + p {margin-top: 30px;}
+.privacy_popup .privacy_box .context p span {font-weight: 500;}
+
+.privacy_popup .privacy_box .context + .context{margin-top: 20px;}
+.privacy_popup .privacy_box .context li, .privacy_popup .privacy_box .first_context p {position: relative; font-size: 16px; font-weight: 300; line-height: 24px; word-break: keep-all;}
+.privacy_popup .privacy_box .context li + li {margin-top: 10px;}
+.privacy_popup .privacy_box .context .text {font-size: 18px; font-weight: 500; margin-bottom: 18px;}
+.privacy_popup .privacy_box .context * + ol, .privacy_popup .privacy_box .context * + ul, .privacy_popup .privacy_box .context * + p {margin-top: 10px;}
+.privacy_popup .privacy_box .context ol > li, .privacy_popup .privacy_box .context ul > li {padding-left: 20px;}
+.privacy_popup .privacy_box .context ul > li::before {content: ''; position: absolute; left: 4px; top: 11px; width: 5px; height: 1px; background-color: #888; display: block;}
+.privacy_popup .privacy_box .context ol > li > i {position: absolute; top: 0; left: 0;}
+
+.privacy_popup .privacy_box .context .table_box {width: 800px; margin: 20px auto 0; padding-bottom: 20px; }
+.privacy_popup .privacy_box .context .table {width: 100%;}
+.privacy_popup .privacy_box .context table th {font-size: 18px; text-align: center; background-color: #f0f0f0; border-top: 2px solid #292929; border-bottom: 1px solid #e4e4e4; font-weight: 500;}
+.privacy_popup .privacy_box .context table td {border-bottom: 1px solid #e4e4e4; border-left: 1px solid #e4e4e4;}
+.privacy_popup .privacy_box .context table td:first-child {border-left: none;}
+.privacy_popup .privacy_box .context table td p {font-size: 16px; font-weight: 200; padding: 0 20px; word-break: keep-all;}
+
+.doc_content .privacy_agree .privacy_popup .pop_btn {background-color: #f0f0f0; padding: 30px 0; text-align: center; border-radius: 0 0 10px 10px;}
+.doc_content .privacy_agree .privacy_popup .pop_btn button {width: 150px; height: 50px; font-size: 20px; font-weight: 600; border-radius: 5px;}
+.doc_content .privacy_agree .privacy_popup .pop_btn .pop_confirm {background-color: #292929; color: #fff; margin-right: 20px;}
+.doc_content .privacy_agree .privacy_popup .pop_btn .close {background-color: #fff; border: 1px solid #292929}
+
+.doc_content .submit_box {text-align: center; margin-top: 50px; }
+.doc_content .submit_box .btn_submit {width: 360px; height: 60px; border-radius: 5px; background-color: #292929; font-size: 20px; color: #fff; font-weight: 500;}
+
+
+@media (max-width: 1000px) {
+  .location_info .dl_line + .dl_line {margin-top: 10px;}
+  .cont_head .subject {font-size: 22px; }
+  .cont_head .title {font-size: 40px;}
+
+  .location_nm {font-size: 22px; margin-bottom: 30px;}
+  .location_info {font-size: 18px; line-height: 24px; margin-bottom: 30px;}
+
+  .map iframe {height: 400px;}
+
+  .doc_content {padding: 0 20px 100px;}
+  .doc_content .conbox .con_title {width: 120px; font-size: 20px; font-weight: 500;}
+  .doc_content .conbox .con_title::before {width: 4px; height: 4px; left: -12px; top: 20px;}
+  .doc_content .conbox .con_input {width: calc(100% - 120px)}
+  .doc_content .conbox .con_input input[type='email'], .doc_content .conbox .con_input input[type='tel'], .doc_content .conbox .con_input input[type='text'] {font-size: 15px; height: 40px;}
+  .doc_content .conbox .con_input textarea {font-size: 15px;}
+  .doc_content .submit_box .btn_submit {height: 48px; font-size: 16px;}
+  .doc_content .conbox .con_input textarea {font-size: 15px; line-height: 24px;}
+  .doc_content .conbox .con_input .upload-name {height: 40px; font-size: 15px;}
+  .doc_content .conbox .con_input .upload-name + label {height: 40px; font-size: 15px; line-height: 42px;}
+  .doc_content .privacy_agree .fake_chk button {font-size: 15px;}
+
+  .privacy_agree .privacy_popup {background-color: rgba(0,0,0,.8);}
+  .privacy_agree .privacy_popup .pop_inner {width: 100%; top: 0; left: 0; transform: translateX(0); height: 100%;}
+  .privacy_agree .privacy_popup .pop_close {width: 14px; height: 14px; top: 18px; right: 20px; background: url(../images/Menu-close2.png) no-repeat center / cover;}
+  .privacy_popup .privacy_box {height: calc(100% - 80px); padding-top: 50px;}
+  .privacy_popup .privacy_box .context .table_box { width: 100%;}
+  .privacy_popup .privacy_box .context .table
+  
+  .doc_content .privacy_agree .privacy_popup .pop_btn {padding: 20px 0; border-radius: 0; height: 80px;}
+  .doc_content .privacy_agree .privacy_popup .pop_btn button {font-size: 18px; width: 120px; height: 40px}
+  
+  
+  .table_box .table td:first-child {border-top: none; background-color:#fff;}
+}
+
+@media (max-width: 640px) {
+  .cont_head {margin: 60px 0;}
+  .cont_head .subject {font-size: 20px;}
+  .cont_head .title {font-size: 36px;}
+
+  .location_nm {font-size: 20px; margin-bottom: 20px;}
+  .location_info {font-size: 16px; line-height: 22px; margin-bottom: 20px;}
+  .location_info .dl_line dt {width: 24px;}
+
+  .doc_content {padding:0 0 100px;}
+  .doc_content .conbox {flex-direction: column;}
+  .doc_content .conbox .con_title {width: auto; font-size: 18px; padding-top: 0; padding-left: 16px;}
+  .doc_content .conbox .con_title::before {width: 4px; height: 4px; left: 0; top: 9px;}
+  .doc_content .conbox .con_input {width: 100%; margin-top: 20px;}
+  .doc_content .conbox .con_input .upload-name {width: calc(100% - 100px);}
+  .doc_content .conbox .con_input .upload-name + label {width: 100px;}
+  .doc_content .privacy_agree .privacy_popup .pop_btn .pop_confirm {margin-right: 10px;}
+
+  .privacy_popup .privacy_box .first_context p {font-size: 14px; line-height: 20px;}
+  
+  
+}

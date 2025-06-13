@@ -1,0 +1,13 @@
+익명 / 화살표 / 생성자 함수
+
+1. 익명 함수 : 이름이 없는 함수 표현식
+    ex) 예시 : const f = function(a) { return a}
+        용도 : 일반적으로 또는 콜백 등
+
+2. 화살표 함수 : ES6(ECMAScript 2015)에서 도입된 간결한 함수 표현식
+    ex) 예시 : const f = (a) => a 
+        용도 : 간결, 짧은...콜백 등
+
+3. 생성자 함수 : new 키워드로 호출되는 함수 (객체 생성 용도)
+    ex) 예시 : function person(name) {this.name = name}
+        용도 : 인스턴스 객체 생성

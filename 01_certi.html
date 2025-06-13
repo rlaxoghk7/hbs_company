@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="에이치비에스 기업 사이트">
+  <meta name="keywords" content="산업 통합 시스템 선도기업, 모터, 선박, 에이치비에스, hbs">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="에이치비에스">
+  <meta property="og:site_url" content="https://hbs-company.vercel.app/">
+  <meta property="og:title" content="에이치비에스">
+  <meta property="og:description" content="산업통합시스템 선도기업">
+  
+  <meta property="og:image" content="https://hbs-company.vercel.app/images/og-600.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/Favicon-32.png" type="image/x-icon" sizes="32x32">
+  <link rel="shortcut icon" href="./images/Favicon-18.png" type="image/x-icon" sizes="18x18">
+  <link rel="shortcut icon" href="./images/Favicon-180.png" type="image/x-icon" sizes="180x180">
+  
+  <!-- style -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/contents.css">
+
+  
+  <!-- script -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script src="./js/common.js"></script>
+  
+
+  <title>hbs주식회사</title>
+</head>
+<body data-top="no-top">
+  <!-- header -->
+  <div id="header"></div>
+  <script>
+    fetch('/inc/top_menu.html')
+      .then(res => res.text())
+      .then(html => {
+        document.querySelector('#header').innerHTML = html;
+      });
+  </script>
+  <!-- //header -->
+
+  <!-- about content -->
+  <div id="container" class="hbs_about hbs_corp">
+    <!-- 상단이미지 -->
+    <div id="sub_banner">
+      <div class="sub_visual">
+        <div class="visual_img"></div>
+      </div>  
+      <h2 class="page_name"></h2>
+      <div class="path_wrap">
+        <ul class="path_list">
+          <!-- javascript에서 불러오기 -->
+          <!-- <li class="path_item active"><a href="./about.html" class="path_text">인사말</a></li>
+          <li class="path_item"><a href="./certi.html" class="path_text">인증서</a></li>
+          <li class="path_item"><a href="./location.html" class="path_text">오시는길</a></li> -->
+        </ul>
+      </div>
+    </div>  
+    <!-- //상단이미지 -->
+
+    <!-- sub content -->
+    <div id="content">
+      <div class="inner_wrap">
+        <div class="certi_box">
+          <div class="certi_title">인증서 현황</div>
+          <div class="certi_table">
+            <div class="table_box">
+              <button type="button" class="open_table" title="열기">국내·등록특허(9)</button>
+              <div class="conbox">
+                <table class="table responsive">
+                  <caption>국내·등록특허 테이블 - 특허명, 인증명, 출원번호, 등록일자</caption>
+                  <colgroup>
+                    <col>
+                    <col style="width: 240px">
+                    <col style="width: 160px">
+                    <col style="width: 160px">
+                  </colgroup>
+                  <thead>
+                    <tr>                  
+                      <th scope="col">특허명</th> <!-- scope="col" : 헤더 셀의 영역이 행인지 열인지 명확히 정의 -->
+                      <th scope="col">인증명</th>
+                      <th scope="col">출원번호</th>
+                      <th scope="col">등록일자</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-content="특허명 : ">자동화제어 시스템 전기제어 판넬 국제표준화기구(ISO)에서 제정ㆍ시행하고 있는 품질경영시스템에 관한 국제규격</td>
+                      <td data-content="인증명 : ">품질경영시스템 인증 ISO 9001</td>
+                      <td data-content="출원번호 : ">기업인증</td>
+                      <td data-content="등록일자 : ">2019.03.20</td>
+                    </tr>
+                    <tr>
+                      <td data-content="특허명 : ">자동화제어 시스템 전기제어 판넬 국제표준화기구(ISO) 기술위원회(TC 207)에서 제정한 환경경영체제에 관한 국제표준인 'ISO 14000 시리즈' 중 가장 중요하게 여기지고 있는 'ISO 14001'</td>
+                      <td data-content="인증명 : ">환경경영시스템 인증 ISO 14001</td>
+                      <td data-content="출원번호 : ">기업인증</td>
+                      <td data-content="등록일자 : ">2019.03.20</td>
+                    </tr>
+                    <tr>
+                      <td data-content="특허명 : ">(주)하이젠모터스의 제품판매 공식대리점 인증</td>
+                      <td data-content="인증명 : ">하이젠(Hizen)공식대리점 인증</td>
+                      <td data-content="출원번호 : ">대리점 인증</td>
+                      <td data-content="등록일자 : ">2008.01.01</td>
+                    </tr>
+                    <tr>
+                      <td data-content="특허명 : ">(주)ABB의 제품판매 공식대리점인증</td>
+                      <td data-content="인증명 : ">ABB 공식대리점 인증</td>
+                      <td data-content="출원번호 : ">대리점 인증</td>
+                      <td data-content="등록일자 : ">2022.09.14</td>
+                    </tr>
+                    <tr>
+                      <td data-content="특허명 : ">(주)댄포스의 제품판매 공식대리점 인증</td>
+                      <td data-content="인증명 : ">댄포스(Danfoss)공식대리점 인증	</td>
+                      <td data-content="출원번호 : ">대리점 인증</td>
+                      <td data-content="등록일자 : ">2022.09.14</td>
+                    </tr>
+                    <tr>
+                      <td data-content="특허명 : ">(주)윌로폄프의 제품판매 공식대리점 인증	</td>
+                      <td data-content="인증명 : ">윌로(Wilo)공식대리점 인증</td>
+                      <td data-content="출원번호 : ">대리점 인증</td>
+                      <td data-content="등록일자 : ">1988.08.01</td>
+                    </tr>
+                    <tr>
+                      <td data-content="특허명 : ">그런포스(주)의 제품판매 공식대리점 인증</td>
+                      <td data-content="인증명 : ">그런포스(Grundfos)공식대리점 인증</td>
+                      <td data-content="출원번호 : ">대리점 인증</td>
+                      <td data-content="등록일자 : ">2013.05.22</td>
+                    </tr>
+                    <tr>
+                      <td data-content="특허명 : ">(주)데스미의 제품판매 공식대리점 인증</td>
+                      <td data-content="인증명 : ">데스미(Desmi)공식대리점 인증</td>
+                      <td data-content="출원번호 : ">대리점 인증</td>
+                      <td data-content="등록일자 : ">2015.08.01</td>
+                    </tr>
+                    <tr>
+                      <td data-content="특허명 : ">에이치비에스(주) 선박용 조타장치 발명 특허증	</td>
+                      <td data-content="인증명 : ">선박용 조타 장치</td>
+                      <td data-content="출원번호 : ">특허증</td>
+                      <td data-content="등록일자 : ">2019.09.06</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="certification grid">
+                  <img src="./images/c_1.jpg" alt="특허증1">
+                  <img src="./images/c_2.jpg" alt="특허증2">
+                  <img src="./images/c_3.jpg" alt="특허증3">
+                  <img src="./images/c_4.jpg" alt="특허증4">
+                  <img src="./images/c_5.jpg" alt="특허증5">
+                  <img src="./images/c_6.jpg" alt="특허증6">
+                  <img src="./images/c_7.jpg" alt="특허증7">
+                  <img src="./images/c_8.jpg" alt="특허증8">
+                  <img src="./images/c_9.jpg" alt="특허증9">
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>  
+    </div>
+    <!-- //sub content -->
+  </div>
+
+  <!-- //about content -->
+
+  <!-- footer -->
+  <div id="footer"></div>
+  <script>
+    fetch('/inc/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.querySelector('#footer').innerHTML = html;
+
+        const script = document.createElement('script');
+        script.src = './js/main.js';
+        document.body.appendChild(script);
+      });
+  </script>
+  <!-- //footer -->
+ <script src="./js/sub.js"></script>
+   
+</body>
+</html>

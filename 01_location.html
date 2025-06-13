@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="에이치비에스 기업 사이트">
+  <meta name="keywords" content="산업 통합 시스템 선도기업, 모터, 선박, 에이치비에스, hbs">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="에이치비에스">
+  <meta property="og:site_url" content="https://hbs-company.vercel.app/">
+  <meta property="og:title" content="에이치비에스">
+  <meta property="og:description" content="산업통합시스템 선도기업">
+  
+  <meta property="og:image" content="https://hbs-company.vercel.app/images/og-600.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/Favicon-32.png" type="image/x-icon" sizes="32x32">
+  <link rel="shortcut icon" href="./images/Favicon-18.png" type="image/x-icon" sizes="18x18">
+  <link rel="shortcut icon" href="./images/Favicon-180.png" type="image/x-icon" sizes="180x180">
+  
+  <!-- style -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/contents.css">
+
+  
+  <!-- script -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script src="./js/common.js"></script>
+  
+
+  <title>hbs주식회사</title>
+</head>
+<body data-top="no-top">
+  <!-- header -->
+  <div id="header"></div>
+  <script>
+    fetch('/inc/top_menu.html')
+      .then(res => res.text())
+      .then(html => {
+        document.querySelector('#header').innerHTML = html;
+      });
+  </script>
+  <!-- //header -->
+
+  <!-- about content -->
+  <div id="container" class="hbs_about hbs_corp">
+    <!-- 상단이미지 -->
+    <div id="sub_banner">
+      <div class="sub_visual">
+        <div class="visual_img"></div>
+      </div>  
+      <h2 class="page_name"></h2>
+      <div class="path_wrap">
+        <ul class="path_list">
+          <!-- javascript에서 불러오기 -->
+          <!-- <li class="path_item active"><a href="./about.html" class="path_text">인사말</a></li>
+          <li class="path_item"><a href="./certi.html" class="path_text">인증서</a></li>
+          <li class="path_item"><a href="./location.html" class="path_text">오시는길</a></li> -->
+        </ul>
+      </div>
+    </div>  
+    <!-- //상단이미지 -->
+
+    <!-- sub content -->
+    <div id="content">
+      <div class="cont_head">
+        <div class="subject">LOCATION</div>
+        <div class="title">오시는 길</div>
+      </div>
+      <div class="inner_wrap">
+        <div class="conbox">
+          <div class="location_nm">에이치비에스 부산 본사</div>
+          <dl class="location_info">
+            <div class="dl_line">
+              <dt>A.</dt>
+              <dd>부산광역시 사상구 괘감로 37, 1동 119호 ~ 121호(괘법동, 산업용품유통상가)37,<br> Gwaegam-ro, Sasang-gu, Busan, Republic of Korea</dd>
+            </div>
+            <div class="dl_line">
+              <dt>T.</dt>
+              <dd>051-319-3111</dd>
+            </div>
+            <div class="dl_line">
+              <dt>E.</dt>
+              <dd>hbs@hbsolution.kr</dd>
+            </div>
+          </dl>
+          <!-- 구글지도 -->
+          <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d815.4681251679714!2d128.9788725696493!3d35.159800394716655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568c1dcfddfba5f%3A0x7e2f06802463097d!2z7JeQ7J207LmY67mE7JeQ7IqkKOyjvCk!5e0!3m2!1sko!2skr!4v1749449846394!5m2!1sko!2skr" width="1200" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div> 
+        </div>
+      </div>  
+    </div>
+    <!-- //sub content -->
+  </div>
+
+  <!-- //about content -->
+
+  <!-- footer -->
+  <div id="footer"></div>
+  <script>
+    fetch('/inc/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.querySelector('#footer').innerHTML = html;
+
+        const script = document.createElement('script');
+        script.src = './js/main.js';
+        document.body.appendChild(script);
+      });
+  </script>
+  <!-- //footer -->
+ <script src="./js/sub.js"></script>
+   
+</body>
+</html>

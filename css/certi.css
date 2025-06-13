@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+.certi_box {margin: 100px 0;}
+.certi_box .certi_title {margin-bottom: 50px; font-size: 42px; font-weight: 700; text-align: center;}
+.certi_table {text-align: center; color: #292929}
+.table {width: 100%; border-collapse: collapse; /* 셀들 간의 테두리가 하나로 합쳐져 보임 */ border-spacing: 0;/* 칸과 칸사이의 거리 */}
+.table_box .table th {padding: 12px 0; border-top: 3px solid #292929; border-bottom: 1px solid #ccc; font-size: 20px; font-weight: 600;}
+.table_box .table td {padding: 30px 0; border-bottom: 2px solid #ccc; font-size: 17px; line-height: 30px; word-break: keep-all; font-weight: 300;}
+
+.table_box {position: relative;}
+.table_box .open_table {display: none;}
+
+.certification {margin-top: 60px; display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-start;}
+.certification.grid img {width: calc(25% - 10px); max-width: 100%; height: auto; box-sizing: border-box;}
+
+@media (max-width: 1000px) {
+  /* 테이블 반응형 */
+  .table.responsive, .table.responsive tbody, .table.responsive tr, .table.responsive td {display: block;} 
+  .table.responsive thead {display: none;}
+  .table.responsive td::before {content: attr(data-content); display: inline;}
+  
+  .certi_table {text-align: left;}
+
+  .table_box .open_table {display: inline-block; width: 100%; height: 40px; font-size: 30px; font-weight: 500; text-align: left;}
+  .table_box .open_table::after {content: ''; display: block; position: absolute; top:13px; right: 0; width: 18px; height: 18px; background: url(../images/arrow_low.svg) no-repeat center / contain; transition: transform .3s ease-in-out;}
+  .table_box .open_table.on::after {content: ''; transform: scale(-1);}
+
+  .table_box .conbox {display: none; margin-top: 10px;}
+  
+  .table_box .table tr + tr {margin-top: 30px;}
+
+  .table_box .table td {padding: 0 20px; border-bottom: none;}
+  .table_box .table td:nth-child(2) {padding-top: 10px;}
+  .table_box .table td:first-child {padding: 20px; border-top: 2px solid #292929; border-bottom: 1px solid #ccc; font-size: 20px; font-weight: 500; font-size: 19px; line-height: 24px; background-color: #f1f1f1;}
+  .certification.grid img {width: calc(33.33% - 10px)}
+}
+
+@media (max-width: 640px) {
+  .table_box .table td:first-child {padding: 20px 10px; font-size: 17px;}
+  .table_box .table td {padding: 0 10px; font-size: 16px; line-height: 24px;}
+  .certification.grid img {width: calc(50% - 10px)}
+  
+
+}

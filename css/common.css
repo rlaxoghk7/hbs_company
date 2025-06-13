@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+/* 공통요소 */
+body {color: #292929;}
+body.lock {overflow: hidden;}
+.wrap {
+  position: relative;
+  width: 1600px;
+  margin: 0 auto;
+}
+placeholder 
+#container {overflow: hidden;}
+#content {padding-bottom: 100px;}
+#content .inner_wrap {width: 1200px; margin: 0 auto;}
+#content .matchbox {display: none;}
+#content .matchbox.active {display: block;}
+
+/* padding */
+.pb_80 {padding-bottom: 80px;}
+
+@media (max-width:1600px) {
+  .wrap {width: 1200px;}
+}
+@media (max-width:1200px) {
+  .wrap {width: 94vw;}
+}
+
+/* body {height: 6000px; background-color: #0f5819;} */
+
+/* header */
+#header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 84px;
+  background-color: transparent;
+  transform: translate(-50%);
+  transition: top .3 ease-in-out;
+  z-index: 999;
+}
+#header::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 84px;
+  left: calc(50% - 50vw);
+  width: 100vw;
+  height: 1px;
+  background-color: rgba(0,0,0,.2);
+}
+
+#header .logo_box {
+  position: relative;
+  width: 160px;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+  z-index: 10;
+}
+#header .logo_box .logo {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  /* background-image: url(../images/toplogo\ \(2\).png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; */
+  background: url("../images/toplogo2.png") no-repeat center / contain;
+  width: 160px;
+  height: 72px;  
+}
+#header .logo_box .logo_inner_type {width: 70px; height: 54px; background: url("../images/toplogo2.png") no-repeat center / contain;}
+.menu_open, .gnb_contain, .gnb_top, .header_copyright  {display: none;}
+.depth, .depth_list, .depth_item, .depth_text {position: relative;}
+.depth_text {display: block;}
+.depth1 .depth1_list .depth1_text {
+  color: #fff;
+  font-size: 20px;
+}
+.depth2 .depth2_list .depth2_text {
+  color: #fff;
+  font-size: 16px;
+}
+body[data-top="no-top"] #header {background-color: rgba(41,41,41,.8);}
+body[data-top="no-top"] #header .logo_box .logo {
+  background-image: url(../images/toplogo2.png); 
+  
+}
+.gnb_open body[data-top="no-top"] #header {background-color: transparent;}
+
+.scroll_down #header{top:-85px;}
+.scroll_down.gnb_open #header {top:0;}
+
+@media (min-width: 1201px) {
+.depth1 {padding-left: 400px;}
+.depth1::before { content: ''; position: absolute; top: 0; left: calc(50% - 50vw); width: 100vw; height: 100%; background-color: rgba(41,41,41,.8);}
+.depth1::after{content: ''; position: absolute; top: 84px; left: calc(50% - 50vw); width: 100vw; height: 1px; background-color: rgba(255,255,255,.5);}
+
+.depth1 .depth1_list {display: flex; width: 840px; padding-top: 20px;font-size: 0; line-height: 0; justify-content: center;}
+
+.depth1 .depth1_list .depth1_item {position: relative; width: 170px; vertical-align: top;}
+.depth1 .depth1_list .depth1_text {line-height: 64px; text-align: center;}
+.depth2 {visibility: hidden; position: absolute; width: 100%; height: calc(100% - 64px); border-left: 1px solid rgba(255,255,255,.5); opacity: 0; transition: opacity .3s ease-in-out;}
+.depth1 .depth1_list .depth1_item:last-child .depth2 {border-right: 1px solid rgba(255,255,255,.5);}
+.depth1 .depth1_list .depth1_item {position: relative; width: 160px; vertical-align: top;}
+.depth1 .depth1_list .depth1_item::after {content: ''; display: block; position: absolute; top: 64px; width: 100%; height: 3px; background-color: #00C7A9; transform: rotateY(90deg); transition: .3s ease-in-out;}
+.depth1 .depth1_list .depth1_item:hover::after {transform: rotateY(0);}    
+.depth2 .depth2_list {padding: 20px 20px;}
+.depth2 .depth2_list .depth2_text:hover {color: #00C7A9;}
+.depth2 .depth2_list .depth2_item.active .depth2_text {color: #00C7A9;}
+
+/* gnb_open */
+.gnb_open #header .logo_box .logo {background-image: url(../images/toplogo2.png);}
+.gnb_open .depth1::before, .gnb_open .depth1::after {display: block;}
+.gnb_open .depth1 .depth1_list .depth1_text {color: #fff;}
+.gnb_open .depth2 {visibility: visible; position: relative; opacity: 1;}
+.gnb_open .depth2_list .depth2_text {padding: 10px 0; line-height: 1;}
+
+body[data-top="no-top"] .depth1 .depth1_list .depth1_text {color: #fff;}
+}
+
+@media (min-width: 1601px) {
+.depth1 {padding-left: 320px;}
+.depth1 .depth1_list {width: 960px;}
+.depth1 .depth_list .depth1_item {width: 200px;}
+}
+@media (max-width: 1200px) {
+  .gnb_open body {overflow: hidden;}
+  #header {height: 64px;}
+  #header::before {top: 64px;}
+  #header .logo_box .logo {position: static; background-image: url(../images/toplogo2.png);}
+  .menu_open {display: block; position: absolute; top: calc(50% - 10px); right: 0; width: 30px; height: 30px; background: url(../images/Menu-line.png) no-repeat center / contain; color: transparent; font-size: 0; z-index: 39;}
+  .gnb_contain {display: block; position: fixed; top: 0; left: 0; z-index: 0; width: 100vw; height: 100vh; background-color: rgba(41,41,41,.5); opacity: 0; visibility: hidden;}
+  .gnb {visibility: hidden; position: fixed; top: 0; right: 0; z-index: 40; width: 450px; height: 100vh; background-color: #292929; overflow-y: auto; opacity: 1;}
+  .gnb .gnb_top {display: flex; justify-content: space-between; align-items: center; position: relative; width: 100%; padding: 0 3vw;}
+  .gnb .gnb_top .menu_close {width: 30px; height: 30px; background: url(../images/Menu-close.png) no-repeat center / contain; color: transparent; font-size: 0;}
+  .gnb_open .gnb_contain, .gnb_open .gnb {visibility: visible; opacity: 1; transition: .3s ease-in-out;}
+  .depth1 .depth1_list .depth1_text {padding: 20px; font-size: 18px;}
+  .depth1 .depth1_list .depth1_item.has.active .depth1_text::after {transform: translateZ(0);}
+  
+  .depth2 .depth2_list .depth2_item {visibility: hidden; transition: .3s ease-in-out; opacity: 0;}
+  .dpeth2 .depth2_list .depth2_item.has.active::before {transform: scaleY(-1)}
+  .depth2 .depth2_list .depth2_text {padding-left: 40px; font-size: 16px; line-height: 0; transition: .3s ease-in-out; transition-property: line-height, padding; /* transition-property:line-height과 padding에 transition 효과를 주는것. */ }
+  .depth1 .depth1_item.active .depth2 .depth2_list .depth2_item {visibility: visible; opacity: 1;}
+  .depth1 .depth1_item.active .depth2 .depth2_list .depth2_text {padding-bottom: 10px; line-height: 2;}
+
+  .m_line {width: 90%; height: 1px; background-color: #fff; margin: 30px 20px; margin-top: 50px;}
+
+  .header_copyright {display: block; margin-top: 30px; padding: 50px 20px; color: #fff; font-size: 16px; font-weight: 100; line-height: 20px;}
+
+}
+
+@media (max-width: 640px) {
+  .gnb {width: 100%;}
+}
